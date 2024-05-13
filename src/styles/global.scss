@@ -1,0 +1,46 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import './_colors';
+@import './components/product.scss';
+@import './components/checkbox.scss';
+@import './components/select.scss';
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.sw-button {
+    position: relative;
+    border-radius: 0;
+    border: 1px solid $black;
+    background-color: $white;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: $black;
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        bottom: -5px;
+        right: -5px;
+        z-index: -1;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: 1px solid $black;
+    }
+}

@@ -1,0 +1,28 @@
+.custom-select {
+  position: relative;
+  display: inline-block;
+}
+
+.custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 34px;
+  padding-left: 6px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.custom-select::after {
+  content: "";
+  background-image: url("../../utils/images/selectArrow.svg");
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  padding: 0 5px;
+  border-left: 1px solid $black;
+  width: 24px;
+  height: 24px;
+}
