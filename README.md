@@ -1,6 +1,12 @@
+# Junior Developer Test Task 
+- site to check - [https://juniortest2-jurijs-leonovics.000webhostapp.com](https://juniortest2-jurijs-leonovics.000webhostapp.com)
+- [test results](https://github.com/YuraLeo94/sw_jl_jun_dev_task/blob/main/assignment%20doc/test%20res%20passed.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+#### Note: The BE part needs to be run using a separate tool like XAMPP.
 
 ## Available Scripts
 
