@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import names from '../../utils/types/dictionary.consts';
-import { IProduct, IReviceProductsResponse, route } from '../../utils/types/global';
+import { IExecResInfo, IProduct, IReviceProductsResponse, route } from '../../utils/types/global';
 import { useMutation, useQuery } from 'react-query';
 import ProductsService from '../../api/apiClient';
 
@@ -24,12 +24,14 @@ function ProductList(): JSX.Element {
             }
         }
     );
-    const { mutate: deleteByIds } = useMutation<any, Error>(
+
+    const { mutate: deleteByIds } = useMutation<IExecResInfo, Error>(
+        'delete-products',
         async () => {
             return await ProductsService.deleteByIds(selectedItems)
         },
         {
-            onSuccess: async (res) => {
+            onSuccess: async () => {
                 await refetchProducts();
             }
         }

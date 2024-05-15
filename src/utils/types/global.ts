@@ -16,6 +16,7 @@ export interface IExecResInfo {
     message: string | string[];
     status: RequestStatus;
 }
+
 export interface IProduct {
     sku: string;
     name: string;
